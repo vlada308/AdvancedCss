@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kreiranje responsive galerije - Vladimir Kostic</title>
+        <meta name="author" content="Vladimir Kostic">
+
+        <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        h1 {
+            text-align: left;
+            font-size: 2.2em;
+            font-weight: bold;
+            padding: 20px 0;
+        }
+
+        #wrapper {
+            max-width: 1200px; 
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        #header {
+            text-align: left;
+            font-size: 2.2em;
+            font-weight: bold;
+            padding: 20px 0;
+        }
+
+        main {
+            margin: 10%;
+        }
+
+        #gallery {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(auto, 1fr);
+            grid-gap: 50px;
+            font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1600 - 300)));
+        } 
+
+        article {
+            font-size: calc(14px + (23 - 14) * ((100vw - 300px) / (1600 - 300)));
+        }
+
+        .image {
+            height: 120px;
+            display: flex;
+            flex-direction: column;
+            background-color: #6ba2d9;
+            border-radius: 5%;
+            overflow: hidden;
+        }
+
+        .placeholder {
+            width: 100%;
+            height: 80%;
+            background-image: url("placeholder-image155w.png");
+            background-repeat:  no-repeat;
+            background-position: center center;
+            background-size: contain;
+        }
+
+
+        .title {
+            width:100%;
+            height: 20%;
+            background-color: #faf7ff;
+            color: grey;
+            text-align: center;
+            padding: 3% 0;
+        }
+
+        @media screen and (max-width: 1024px) {
+            #gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            #header {
+                font-size: 2em;
+            }
+            .placeholder {
+                background-image: url("placeholder-image220w.png");
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            main{
+                margin: 15%;
+            }
+            #gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            #header {
+                font-size: 1.8em;
+            }
+            .placeholder {
+                background-image: url("placeholder-image250w.png");
+            }
+        }
+
+        @media screen and (max-width: 414px) {
+            main{
+                margin: 20%;
+            }
+            #gallery {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            #header {
+                font-size: 1.6em;
+            }
+            .placeholder {
+                background-image: url("placeholder-image300w.png");
+            }
+        }
+
+        @media only screen and (min-resolution: 2dppx) and (max-width: 414px) {
+            .placeholder {
+                background-image: url("placeholder-image600w.png");
+            }
+        }
+
+        @media only screen and (min-resolution: 3dppx) and (max-width: 414px) {
+            .placeholder {
+                background-image: url("placeholder-image.png");
+            }
+        }
+
+        @media screen and (max-width: 360px) {
+            #header {
+                font-size: 1.2em;
+            }
+        }
+
+        @media screen and (max-width: 299px) {
+            article {
+                font-size: 14px;
+            }
+            #gallery {
+                font-size: 14px;
+            }
+        }
+
+        @media screen and (min-width: 1600px) {
+            article {
+                font-size: 23px;
+            }
+            #header {
+                font-size: 2.4em;
+            }
+            #gallery {
+                font-size: 16px;
+            }
+        }
+
+        </style>
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <main>
+                <header id="header">
+                    Gallery Heading
+                </header>
+                <div id="gallery">
+                    <div class="image">
+                        <div class="placeholder">
+                        </div>
+                        <div class="title">Image Title</div>
+                    </div>
+                    <div class="image">
+                        <div class="placeholder">
+                        </div>
+                        <div class="title">Image Title</div>
+                    </div>
+                    <div class="image">
+                        <div class="placeholder">
+                        </div>
+                        <div class="title">Image Title</div>
+                    </div>
+                    <div class="image">
+                        <div class="placeholder">
+                        </div>
+                        <div class="title">Image Title</div>
+                    </div>
+                    <div class="image">
+                        <div class="placeholder">
+                        </div>
+                        <div class="title">Image Title</div>
+                    </div>
+                    <div class="image">
+                        <div class="placeholder">
+                        </div>
+                        <div class="title">Image Title</div>
+                    </div>
+                    <div class="image">
+                        <div class="placeholder">
+                        </div>
+                        <div class="title">Image Title</div>
+                    </div>
+                    <div class="image">
+                        <div class="placeholder">
+                        </div>
+                        <div class="title">Image Title</div>
+                    </div>
+                    <div class="image">
+                        <div class="placeholder">
+                        </div>
+                        <div class="title">Image Title</div>
+                    </div>
+                    <div class="image">
+                        <div class="placeholder">
+                        </div>
+                        <div class="title">Image Title</div>
+                    </div>
+                </div>
+                <article>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget leo nec dolor euismod aliquam. 
+                        Maecenas eu scelerisque elit, sit amet molestie arcu. Cras nec purus convallis, sagittis ligula quis, 
+                        tristique eros. Mauris placerat, sem sollicitudin fermentum laoreet, sem quam iaculis odio, eu efficitur 
+                        orci orci at massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+                        Curabitur aliquet in sem nec luctus. Nulla facilisis fermentum risus quis faucibus. Fusce at efficitur lorem. 
+                        Praesent vitae arcu odio. Proin vel augue quis neque aliquam venenatis eget ut nisl. Phasellus ac purus eget 
+                        magna lobortis iaculis vitae eget nunc. Aenean urna justo, hendrerit nec consequat quis, efficitur sed massa. 
+                        Aliquam felis eros, euismod eu euismod viverra, hendrerit sed velit. Curabitur lacinia, arcu id fringilla 
+                        tincidunt, dui lectus efficitur metus, eget pretium ligula augue et mauris. Praesent ac tempus arcu, in 
+                        hendrerit odio. Nam luctus purus in varius blandit. 
+                    </p>
+                </article>
+            </main>
+        </div>
+    </body>
+    
+</html>
